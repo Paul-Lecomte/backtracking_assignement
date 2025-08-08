@@ -22,5 +22,29 @@ std::vector<std::string> findWordLadder(const std::string& start, const std::str
     q.push({start});
     visited.insert(start);
 
+    while (!q.empty()) {
+        std::vector<std::string> path = q.front();
+        q.pop();
+
+        const std::string& lastWord = path.back();
+
+        if (lastWord == end) {
+            return path; // Found the shortest ladder
+        }
+
+        for (const std::string& word : dict) {
+            // TODO: Check if word is valid neighbor and not visited
+
+
+            if (differByOne(lastWord, word) && visited.find(word) == visited.end()) {
+                //Build a new path with the neighbor word
+                std::vector<std::string> newPath = path;
+                newPath.push_back(word);
+                q.push(newPath);
+                visited.insert(word);
+            }
+        }
+    }
+
     return {}; // stub
 }
