@@ -19,6 +19,13 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
 int main() {
     std::cout << "Assignment 4 - Backtracking Problems" << std::endl;
 
+    // Word ladder test
+    std::string start = "code";
+    std::string end = "data";
+
+    auto dict = loadDictionary("data/dictionary.txt");
+    std::vector<std::string> ladder = findWordLadder(start, end, dict);
+
     // Tu pourras appeler ici chaque fonction de test que tu implémenteras
     return 0;
 }
