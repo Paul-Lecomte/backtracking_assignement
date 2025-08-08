@@ -19,6 +19,8 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
 }
 
 int main() {
+
+    /*
     std::cout << "Assignment 4 - Backtracking Problems" << std::endl;
 
     std::string start = "gold";
@@ -37,6 +39,7 @@ int main() {
         }
         std::cout << std::endl;
     }
+    */
 
     return 0;
 }
