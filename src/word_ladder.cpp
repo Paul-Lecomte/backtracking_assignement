@@ -12,10 +12,14 @@ bool differByOne(const std::string& a, const std::string& b) {
         }
     }
     return diffcount == 1;
-};
+}
 
 std::vector<std::string> findWordLadder(const std::string& start, const std::string& end, const std::unordered_set<std::string>& dict) {
     // TODO: Implémenter l’algorithme BFS
+    std::queue<std::vector<std::string>> q;
+    std::unordered_set<std::string> visited;
+
+
 
     return {}; // stub
 }
