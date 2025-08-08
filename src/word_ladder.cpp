@@ -19,7 +19,8 @@ std::vector<std::string> findWordLadder(const std::string& start, const std::str
     std::queue<std::vector<std::string>> q;
     std::unordered_set<std::string> visited;
 
-
+    q.push({start});
+    visited.insert(start);
 
     return {}; // stub
 }
