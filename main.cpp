@@ -6,6 +6,8 @@
 #include "maze_solver.hpp"
 #include "boggle_solver.hpp"
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Dictionary loading function
 std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     std::unordered_set<std::string> dict;
     std::ifstream file(filename);
@@ -17,7 +19,11 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     }
     return dict;
 }
+// ---------------------------------------------------------------------------------------------------------------------
+// Maze loading function
 
+
+// ---------------------------------------------------------------------------------------------------------------------
 int main() {
 
     /*
