@@ -25,6 +25,9 @@ bool backtrack(const Maze& maze,
         return false;
     }
 
+    // We mark the cell as visited
+    visited[r][c] = true;
+
 
 }
 
