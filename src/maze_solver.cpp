@@ -20,6 +20,11 @@ bool backtrack(const Maze& maze,
         return false;
     }
 
+    // We check if we have already visited this cell
+    if (maze[r][c] == 'S') {
+        return false;
+    }
+
 
 }
 
