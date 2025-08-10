@@ -21,7 +21,15 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
 }
 // ---------------------------------------------------------------------------------------------------------------------
 // Maze loading function
-
+Maze loadMaze(const std::string& filename) {
+    Maze maze;
+    std::ifstream file(filename);
+    std::string line;
+    while (std::getline(file, line)) {
+        maze.push_back(line);
+    }
+    return maze;
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 int main() {
