@@ -8,6 +8,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Dictionary loading function
+/*
 std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     std::unordered_set<std::string> dict;
     std::ifstream file(filename);
@@ -19,6 +20,7 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     }
     return dict;
 }
+*/
 // ---------------------------------------------------------------------------------------------------------------------
 // Maze loading function
 Maze loadMaze(const std::string& filename) {
@@ -58,8 +60,23 @@ int main() {
     // ---------------------------------------------------------------------------------------------------------------------
     // Maze solver
 
+    Maze maze = loadMaze("data/sample_maze.txt");
 
+    // Start and end positions (row, col)
+    std::pair<int, int> start = {3, 6}; // example: position of 'S'
+    std::pair<int, int> end = {9, 11};  // example: some target position
 
+    Path path = solveMaze(maze, start, end);
+
+    if (path.empty()) {
+        std::cout << "No path found in the maze." << std::endl;
+    } else {
+        std::cout << "Path found: ";
+        for (auto& [r, c] : path) {
+            std::cout << "(" << r << "," << c << ") ";
+        }
+        std::cout << std::endl;
+    }
 
     // ---------------------------------------------------------------------------------------------------------------------
 
