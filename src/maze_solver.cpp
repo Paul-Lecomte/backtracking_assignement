@@ -59,5 +59,15 @@ bool backtrack(const Maze& maze,
 
 Path solveMaze(const Maze& maze, std::pair<int, int> start, std::pair<int, int> end) {
     // TODO: Backtracking récursif pour trouver un chemin
-    return {}; // stub
+
+    // Where we will store the solution (path)
+    Path path;
+
+    // visited[r][c] will be true if the cell (r, c) has been visited
+    std::vector<std::vector<bool>> visited(maze.size(), std::vector<bool>(maze[0].size(), false));
+
+    // Start the recursive search
+    backtrack(maze, start, end, visited, path);
+
+    return path; // stub
 }
