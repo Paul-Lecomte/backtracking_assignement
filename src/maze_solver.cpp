@@ -52,6 +52,9 @@ bool backtrack(const Maze& maze,
         }
     }
 
+    // If no directions worked, we remove the current position from the path
+    path.pop_back();
+    return false;
 }
 
 Path solveMaze(const Maze& maze, std::pair<int, int> start, std::pair<int, int> end) {
