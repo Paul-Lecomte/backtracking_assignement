@@ -28,6 +28,8 @@ bool backtrack(const Maze& maze,
     // We mark the cell as visited
     visited[r][c] = true;
 
+    // Add the current position to the path
+    path.push_back(current);
 
 }
 
