@@ -31,6 +31,11 @@ bool backtrack(const Maze& maze,
     // Add the current position to the path
     path.push_back(current);
 
+    // Check if we have reached the end
+    if (current == end) {
+        return true;
+    }
+
 }
 
 Path solveMaze(const Maze& maze, std::pair<int, int> start, std::pair<int, int> end) {
