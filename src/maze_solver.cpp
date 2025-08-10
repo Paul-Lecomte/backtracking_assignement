@@ -16,7 +16,7 @@ bool backtrack(const Maze& maze,
     }
 
     // We allow space, 'S', and 'E' — everything else is a wall
-    if (maze[r][r] != '' && maze[r][c] != 'S' && maze[r][c] != 'E') {
+    if (maze[r][r] != ' ' && maze[r][c] != 'S' && maze[r][c] != 'E') {
         return false;
     }
 
