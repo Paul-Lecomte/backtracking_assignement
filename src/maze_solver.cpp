@@ -44,6 +44,14 @@ bool backtrack(const Maze& maze,
         {0, -1} // left
     };
 
+    // Iterate through each direction and return true if any path leads to the end
+    for (auto [dr, dc] : directions) {
+        std::pair<int, int> next = { r +dr, c + dc };
+        if (backtrack(maze, next, end, visited, path)) {
+            return true;
+        }
+    }
+
 }
 
 Path solveMaze(const Maze& maze, std::pair<int, int> start, std::pair<int, int> end) {
