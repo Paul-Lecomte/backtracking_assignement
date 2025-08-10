@@ -36,6 +36,14 @@ bool backtrack(const Maze& maze,
         return true;
     }
 
+    // Explore all four directions: up, down, left, right
+    static const std::pair<int, int> directions[] = {
+        {-1, 0}, // up
+        {0, 1}, // right
+        {1, 0}, // down
+        {0, -1} // left
+    };
+
 }
 
 Path solveMaze(const Maze& maze, std::pair<int, int> start, std::pair<int, int> end) {
