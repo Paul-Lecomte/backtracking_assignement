@@ -69,5 +69,16 @@ namespace {
 
 std::unordered_set<std::string> findAllWords(const Board& board, const std::unordered_set<std::string>& dictionary) {
     // TODO: DFS + backtracking
+
+    std::unordered_set<std::string> found;
+    auto prefixes = buildPrefixSet(dictionary);
+    const int rows = static_cast<int>(board.size());
+    const int cols = static_cast<int>(board[0].size());
+
+    std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
+    std::string current;
+
+
+
     return {}; // stub
 }
