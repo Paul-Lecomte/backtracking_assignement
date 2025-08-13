@@ -92,5 +92,9 @@ int main() {
         {'i','j','k','l'}
     };
 
+    auto foundWords = findAllWords(board, dict);
+
+
+
     return 0;
 }
