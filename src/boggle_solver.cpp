@@ -78,7 +78,7 @@ std::unordered_set<std::string> findAllWords(const Board& board, const std::unor
     std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
     std::string current;
 
-    for (int r = o; r < rows; ++r) {
+    for (int r = 0; r < rows; ++r) {
         for (int c = 0; c < cols; ++c) {
             dfs(board, r, c, current, visited, dictionary, prefixes, found);
         }
