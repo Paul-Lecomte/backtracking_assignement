@@ -16,6 +16,10 @@ namespace {
         }
         return prefixes;
     }
+
+    inline bool inBounds(int r, int c, int rows, int cols) {
+        return r >= 0 && r < rows && c >= 0 && c < cols;
+    }
 }
 
 std::unordered_set<std::string> findAllWords(const Board& board, const std::unordered_set<std::string>& dictionary) {
