@@ -94,7 +94,12 @@ int main() {
 
     auto foundWords = findAllWords(board, dict);
 
+    if (foundWords.empty()) {
+        std::cout << "No words found on the board." << std::endl;
+    } else {
+        std::cout<< "Words found on the board: " << std::endl;
 
+    }
 
     return 0;
 }
