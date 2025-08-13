@@ -80,9 +80,9 @@ std::unordered_set<std::string> findAllWords(const Board& board, const std::unor
 
     for (int r = o; r < rows; ++r) {
         for (int c = 0; c < cols; ++c) {
-
+            dfs(board, r, c, current, visited, dictionary, prefixes, found);
         }
     }
 
-    return {}; // stub
+    return found; // stub
 }
