@@ -27,6 +27,11 @@ namespace {
              const std::unordered_set<std::string>& prefixes,
              std::unordered_set<std::string>& found) {
 
+        const int rows = static_cast<int>(board.size());
+        const int cols = static_cast<int>(board[0].size());
+
+
+
     }
 }
 
