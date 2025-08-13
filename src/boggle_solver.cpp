@@ -54,7 +54,11 @@ namespace {
             {1,-1}, {1,0}, {1,1}
             }};
         for (auto [dr, dc] : dirs) {
-
+            int nr = r + dr;
+            int nc = c + dc;
+            if (inBounds(nr , nc, rows, cols) && !visited[nr][nc]) {
+                dfs(board, nr, nc, current, visited, dictionary, prefixes, found);
+            }
         }
     }
 }
