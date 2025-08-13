@@ -78,7 +78,9 @@ std::unordered_set<std::string> findAllWords(const Board& board, const std::unor
     std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
     std::string current;
 
+    for (int r = o; r < rows; ++r) {
 
+    }
 
     return {}; // stub
 }
