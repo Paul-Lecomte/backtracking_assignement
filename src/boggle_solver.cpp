@@ -79,7 +79,9 @@ std::unordered_set<std::string> findAllWords(const Board& board, const std::unor
     std::string current;
 
     for (int r = o; r < rows; ++r) {
+        for (int c = 0; c < cols; ++c) {
 
+        }
     }
 
     return {}; // stub
