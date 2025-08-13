@@ -30,8 +30,8 @@ namespace {
         const int rows = static_cast<int>(board.size());
         const int cols = static_cast<int>(board[0].size());
 
-
-
+        // Add current letter
+        current.push_back(static_cast<char>(std::tolower(board[r][c])));
     }
 }
 
