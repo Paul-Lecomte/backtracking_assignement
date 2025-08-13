@@ -60,6 +60,10 @@ namespace {
                 dfs(board, nr, nc, current, visited, dictionary, prefixes, found);
             }
         }
+
+        // Backtrack: unmark visited and remove last letter
+        visited[r][c] = false;
+        current.pop_back();
     }
 }
 
