@@ -32,6 +32,12 @@ namespace {
 
         // Add current letter
         current.push_back(static_cast<char>(std::tolower(board[r][c])));
+
+        // If current prefix is not valid, stop exploring
+        if (!prefixes.count(current)) {
+            current.pop_back();
+            return;
+        }
     }
 }
 
