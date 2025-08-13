@@ -20,6 +20,14 @@ namespace {
     inline bool inBounds(int r, int c, int rows, int cols) {
         return r >= 0 && r < rows && c >= 0 && c < cols;
     }
+
+    void dfs(const Board& board, int r, int c, std::string& current,
+             std::vector<std::vector<bool>>& visited,
+             const std::unordered_set<std::string>& dictionary,
+             const std::unordered_set<std::string>& prefixes,
+             std::unordered_set<std::string>& found) {
+
+    }
 }
 
 std::unordered_set<std::string> findAllWords(const Board& board, const std::unordered_set<std::string>& dictionary) {
