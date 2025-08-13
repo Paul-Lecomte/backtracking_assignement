@@ -8,7 +8,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Dictionary loading function
-/*
+
 std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     std::unordered_set<std::string> dict;
     std::ifstream file(filename);
@@ -20,7 +20,7 @@ std::unordered_set<std::string> loadDictionary(const std::string& filename) {
     }
     return dict;
 }
-*/
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Maze loading function
 /*
@@ -83,7 +83,14 @@ int main() {
 
     // -----------------------------------------------------------------------------------------------------------------
     // Boggle solver
+    auto dict = loadDictionary("data/dictionary.txt");
 
+    Board board = {
+        {'t','e','s','t'},
+        {'a','b','c','d'},
+        {'e','f','g','h'},
+        {'i','j','k','l'}
+    };
 
     return 0;
 }
