@@ -43,6 +43,11 @@ namespace {
         if (current.size() >= MIN_WORD_LEN && dictionary.count(current)) {
             found.insert(current);
         }
+
+        // mark the cell as visited
+        visited[r][c] = true;
+
+
     }
 }
 
