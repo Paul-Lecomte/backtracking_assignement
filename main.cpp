@@ -98,7 +98,9 @@ int main() {
         std::cout << "No words found on the board." << std::endl;
     } else {
         std::cout<< "Words found on the board: " << std::endl;
-
+        for (const auto& word : foundWords) {
+            std::cout << word << std::endl;
+        }
     }
 
     return 0;
