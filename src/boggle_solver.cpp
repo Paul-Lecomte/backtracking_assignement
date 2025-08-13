@@ -38,6 +38,11 @@ namespace {
             current.pop_back();
             return;
         }
+
+        // If this forms a valid word, store it
+        if (current.size() >= MIN_WORD_LEN && dictionary.count(current)) {
+            found.insert(current);
+        }
     }
 }
 
