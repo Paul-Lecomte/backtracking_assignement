@@ -47,7 +47,12 @@ namespace {
         // mark the cell as visited
         visited[r][c] = true;
 
-
+        // Explore all 8 possible directions
+        static const std::array<std::pair<int,int>, 8> dirs {{
+            {-1,-1},{-1,0},{-1,1},
+            {0,-1},        {0,1},
+            {1,-1}, {1,0}, {1,1}
+            }};
     }
 }
 
